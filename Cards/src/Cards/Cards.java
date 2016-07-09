@@ -9,23 +9,12 @@ public class Cards {
 	}
 
 	String getsuit() {
-		 
-			if (sequence <= 12 && sequence >= 0)
-				return "clubs";
-			if (sequence <= 25 && sequence >= 13)
-				return "Diamonds";
-			if (sequence <= 38 && sequence >= 26)
-				return "Hearts";
-			else
-				return "spades";
+		String[] suits = {"Clubs", "Hearts", "Diamonds", "Spades"};
+		return suits[sequence / 13];
+			
 	}
-
-	int getSuitOrder() {
-		return sequence / 13;
-	}
-
 	int getPip() {
-		return sequence % 13 + 1;
+		return sequence % 13;
 	}
 
 	int compare(int seq) {

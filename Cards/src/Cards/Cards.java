@@ -25,33 +25,7 @@ public class Cards {
 		return sequence - c.sequence; 
 	}
 
-	public boolean equals(Cards card2) {
+	public boolean equals(Cards ca) {
 		return ((getPip() == c.getPip()) && (getSuitOrder() == c.getSuitOrder()));
-	}
-
-	boolean isAdjacent(Cards card) {
-		if (this.sequence / 13 != card.sequence / 13){
-			return false;
-		}
-		if (this.sequence == card.sequence - 1){
-			return true;
-		}
-		if (this.sequence == card.sequence + 1){
-			return true;
-		}
-		return false;
-	}
-
-	boolean isSameSuit(Cards card) {
-		 
-		if (this.sequence / 13 == card.sequence / 13){
-			return true;
-		}
-		if (this.getPip() == card.getPip()){
-			System.out.println(this.sequence+" "+card.sequence);
-			return false;
-		}
-		
-		return true;
 	}
 }

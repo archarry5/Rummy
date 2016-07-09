@@ -17,7 +17,7 @@ public class Cards {
 	}
 
 	
-	publuic int getSuitOrder() {
+	public int getSuitOrder() {
 		return sequence / 13;
 	}
 
@@ -25,7 +25,4 @@ public class Cards {
 		return sequence - c.sequence; 
 	}
 
-	public boolean equals(Cards ca) {
-		return ((getPip() == c.getPip()) && (getSuitOrder() == c.getSuitOrder()));
-	}
 }

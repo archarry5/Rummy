@@ -8,7 +8,7 @@ public class Cards {
 		sequence = a;
 	}
 
-	String getsuit() {
+	public String getsuit() {
 		 
 			if (sequence <= 12 && sequence >= 0)
 				return "clubs";
@@ -20,21 +20,16 @@ public class Cards {
 				return "spades";
 	}
 
-	int getSuitOrder() {
+	publuic int getSuitOrder() {
 		return sequence / 13;
 	}
 
-	int getPip() {
-		return sequence % 13 + 1;
+	public int getPip() {
+		return sequence % 13;
 	}
 
-	int compare(int seq) {
-		if (this.sequence == seq) {
-			return 0;
-		} else if (this.sequence > seq) {
-			return -1;
-		}
-		return 1;
+	public int compare(Cards c) {
+		return sequence - c.sequence; 
 	}
 
 	boolean equal(Cards card2) {

@@ -60,29 +60,15 @@ public class Rummy {
 
 	boolean isNaturalsequence(ArrayList<Cards> ar) {
 
-		Cards currentcard;
-		int count = 0;
-		int i;
-		int z;
-		for (int k = 0; k < ar.size() - 1; k++) {
-			currentcard = ar.get(k);
-			z = ar.indexOf(currentcard) + 1;
-			for (i = z; i <= z + 2 && i < 10; i++) {
-				if ((ar.get(i).sequence - currentcard.sequence) == -1) {
+		for (int i = 0; i < ) {
+			currentCard c = ar.get(i);
+			for (int j = 0; j < ar.size(); j++) {
+				if (Math.abs(c.sequence - ar.get(i).sequence) ==  1) {
 					count++;
-					currentcard = ar.get(++k);
-
-				} else
-					break;
-
-			}
-			if (count >= 3)
-				return true;
-			else
-				return false;
-
+					currentCard
+				}
+			} 
 		}
-		return true;
 
 	}
 

@@ -8,37 +8,25 @@ public class Cards {
 		sequence = a;
 	}
 
-	public String getsuit() {
-		 
-			if (sequence <= 12 && sequence >= 0)
-				return "clubs";
-			if (sequence <= 25 && sequence >= 13)
-				return "Diamonds";
-			if (sequence <= 38 && sequence >= 26)
-				return "Hearts";
-			else
-				return "spades";
+	String getsuit() {
+		String[] suits = {"Clubs", "Hearts", "Diamonds", "Spades"};
+		return suits[sequence / 13];			
 	}
-
-	publuic int getSuitOrder() {
-		return sequence / 13;
-	}
-
 	public int getPip() {
 		return sequence % 13;
+	}
+
+	
+	publuic int getSuitOrder() {
+		return sequence / 13;
 	}
 
 	public int compare(Cards c) {
 		return sequence - c.sequence; 
 	}
 
-	boolean equal(Cards card2) {
-		if (this.getPip() == card2.getPip()) {
-			if (this.getSuitOrder() == card2.getSuitOrder()) {
-				return true;
-			}
-		}
-		return false;
+	public boolean equals(Cards card2) {
+		return ((getPip() == c.getPip()) && (getSuitOrder() == c.getSuitOrder()));
 	}
 
 	boolean isAdjacent(Cards card) {
